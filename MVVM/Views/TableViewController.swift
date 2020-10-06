@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewController: UIViewController {
     
-    //MARK: - uiView
+    // MARK: UiView
     
     let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
@@ -19,19 +19,18 @@ class TableViewController: UIViewController {
         return table
     }()
     
-    //MARK: - Properties
+    // MARK: Properties
     
-    var tableViewViewModel: TableViewViewModelType?
+    private var tableViewViewModel: TableViewViewModelType?
+    private var customCellViewModel: TableViewCellViewModelType?
     
-    var customCellViewModel: TableViewCellViewModelType?
+    // MARK: Lifecycle
     
-    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
         tableViewViewModel = TableViewViewModel()
+        
         fetchMovieData()
         tableView.dataSource = self
         tableView.delegate =
@@ -49,10 +48,9 @@ class TableViewController: UIViewController {
             self?.tableView.reloadData()
         }
         
-        
     }
     
-    //MARK: - Func
+    // MARK: Func
     
     func fetchMovieData() {
         tableViewViewModel?.fetchMovie(completion: { (response) in
@@ -64,10 +62,9 @@ class TableViewController: UIViewController {
             }
         })
     }
-    
 }
 
-//MARK: - Extension
+//MARK: - UITableViewDelegate, UITableViewDataSource
 extension TableViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

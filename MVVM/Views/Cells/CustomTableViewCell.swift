@@ -9,7 +9,7 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    //MARK: - Views
+    // MARK: Views
     
     let movieNameLabel: UILabel = {
        let label = UILabel()
@@ -34,10 +34,10 @@ class CustomTableViewCell: UITableViewCell {
     }()
     
     
-    //MARK: - Properties
+    // MARK: Properties
     
     
-    //MARK: - LifeCycle
+    // MARK: LifeCycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -46,15 +46,13 @@ class CustomTableViewCell: UITableViewCell {
         contentView.addSubview(movieVoteLabel)
         
         setUpUI()
-
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    //MARK: - Fucs
+    // MARK: Fucs
     
     func setUpUI(){
         movieNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true

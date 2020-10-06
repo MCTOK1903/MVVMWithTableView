@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - Result
 struct Result: Codable {
      let vote_count: Int
      let id: Int

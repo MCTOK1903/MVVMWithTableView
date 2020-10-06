@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D118A6A04828FD3CDA8640CD2B6796D2"
-               BuildableName = "SwiftyJSON.framework"
-               BlueprintName = "SwiftyJSON"
+               BlueprintIdentifier = "19D62F21F17C29B05DDF102C27B034B6"
+               BuildableName = "Pods_MVVMWithTableView_MVVMWithTableViewUITests.framework"
+               BlueprintName = "Pods-MVVMWithTableView-MVVMWithTableViewUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

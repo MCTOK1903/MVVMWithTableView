@@ -10,7 +10,8 @@ import Foundation
 
 class CustomCellViewModel: TableViewCellViewModelType {
     
-    //MARK: - Properties
+    // MARK: Properties
+    
     private var movieResult: Result
     private var selectedIndexPath: IndexPath!
     
@@ -22,13 +23,9 @@ class CustomCellViewModel: TableViewCellViewModelType {
         return movieResult.vote_count
     }
     
+    // MARK: LifeCycle
     
-    //MARK: - LifeCycle
     init(movieResult: Result) {
         self.movieResult = movieResult
-//        self.selectedIndexPath = selectedIndexPath
     }
-    
-    
-    
 }
